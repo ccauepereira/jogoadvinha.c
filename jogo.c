@@ -6,22 +6,34 @@ int main() {
     printf("Bem-vindo ao jogo de adivinhação\n");
     printf("================================\n\n");
 
-    int a = abs(-10);
-    int b = abs(10);
-    int x = -10;
-    int y = abs(x);
-
     int i;
     int numerosecreto = rand() % 100;
-    int num;
     int chute, acertou;
     int ganhou = 0;
     int tentativas = 1;
     double pontos = 1000;
     double pontosperdidos;
 
-    printf("Quantas tentativas? ");
-    scanf("%d", &num);
+    int num;
+    int nivel;
+
+    printf("Escolha o nível de dificuldade:\n");
+    printf("(1) Fácil (20 tentativas)\n");
+    printf("(2) Médio (15 tentativas)\n");
+    printf("(3) Difícil (6 tentativas)\n");
+    printf("Opção: ");
+    scanf("%d", &nivel);
+
+    if(nivel == 1) {
+        num = 20;
+    } else if(nivel == 2) {
+        num = 15;
+    } else if(nivel == 3) {
+        num = 6;
+    } else {
+        printf("Opção inválida! Usando nível fácil por padrão.\n");
+        num = 20;
+    }
 
     for(i = 0; i < num; i++) {
 
@@ -67,4 +79,5 @@ int main() {
     printf("Fim de jogo! Pontos finais: %.2f\n", pontos);
 
     return 0;
+}return 0;
 }
