@@ -1,5 +1,4 @@
-# jogoadvinha.c
-Aqui vai um README completo e direto para o seu projeto — já pronto pra colar no GitHub:
+# jogoadvinha
 
 ---
 
